@@ -1,0 +1,12 @@
+export const WRITING_FOUNDATION = {
+  IELTS_FOUNDATION: [
+    
+    // Task 2 — Essay writing
+    // Task 2 — Essay writing (Conditional Sentences / Translation Practice)
+{ uzbek: "Agar u o‘sha paytda menga qo‘ng‘iroq qilganida edi, men bo‘lib o‘tgan barcha voqealarni unga batafsil aytib berardim.", english: "If he had called me at that time, I would have told him all the events that had happened in detail." },
+{ uzbek: "Men chin dildan xohlayman, ertaga dam olish kunimizda ob-havo ochiq va juda ham iliq bo‘lishini.", english: "I sincerely wish that tomorrow, on our day off, the weather will be clear and very warm." },
+{ uzbek: "Agar kecha kutilmaganda yomg‘ir yog‘maganida edi, biz do‘stlarimiz bilan bog‘da uzoq vaqt sayr qilib yurgan bo‘lardik.", english: "If it hadn't rained unexpectedly yesterday, we would have been walking in the garden with our friends for a long time." },
+{ uzbek: "Agar men yoshligimda ko‘proq kitob o‘qiganimda edi, bugungi kunda mashhur va muvaffaqiyatli yozuvchi bo‘lib yetishgan bo‘lardim.", english: "If I had read more books in my youth, I would have become a famous and successful writer today." },
+{ uzbek: "Agar mening bo‘sh vaqtim biroz ko‘proq bo‘lsa, sening yangi loyihangni yakunlashga jon deb yordam beraman.", english: "If I had a bit more free time, I would gladly help you finish your new project." },
+{ uzbek: "Agar Laylo bugun kechki ovqat pishirsa, u oilasi tomonidan yuqori baholanadi. Agar u yordam so‘rasa, akasi unga sabzavotlarni tozalashga yordam beradi. U go‘shtni maydalattiradi va ziravorlar qo‘shadi. Agar masalliqlar yetarli bo‘lmasa, u do‘kondan yangi mahsulotlar oldirib keltira oladi. Ovqat tayyor bo‘lganidan so‘ng, u buni qo‘shnilari bilan baham ko‘rishi mumkin. Hozir esa u oshxonani tartibga solmoqda va pishirishni boshlaydi.", english: "If Laylo cooks dinner today, it will be highly appreciated by her family. If she asks for help, her brother will help her peel the vegetables. She will have the meat minced and spices added. If there are not enough ingredients, she can have fresh products brought from the store. After the food is ready, she can share it with her neighbors. Now, she is tidying up the kitchen and will start cooking." },],
+};

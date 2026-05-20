@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.i707-auth-bg {
+  width: 100%;
+  min-height: 100vh;
+  background: #0E0E0E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lora', Georgia, serif;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+
+/* AMBIENT ORBS */
+.i707-auth-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+.i707-auth-orb--top {
+  top: -100px;
+  left: 20%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(192,57,43,0.6), transparent 60%);
+  animation: orbFloatA 14s ease-in-out infinite;
+}
+.i707-auth-orb--bottom {
+  bottom: -120px;
+  right: 15%;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(255,215,0,0.3), transparent 60%);
+  animation: orbFloatB 18s ease-in-out infinite;
+}
+@keyframes orbFloatA {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(40px, 30px); }
+}
+@keyframes orbFloatB {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-30px, -40px); }
+}
+
+/* CARD */
+.i707-auth-card {
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(160deg, #1A1410 0%, #0F0B08 100%);
+  border: 0.5px solid rgba(192, 57, 43, 0.3);
+  border-radius: 24px;
+  padding: 44px 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 60px rgba(192,57,43,0.08);
+}
+
+.i707-auth-card__topline {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, transparent, #C0392B 30%, #FFD700 50%, #C0392B 70%, transparent);
+  animation: toplineSlide 6s ease-in-out infinite;
+}
+@keyframes toplineSlide {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.i707-auth-card__shimmer {
+  position: absolute;
+  top: 0; left: -120%;
+  width: 60%; height: 100%;
+  background: linear-gradient(110deg, transparent 30%, rgba(245,240,232,0.04) 50%, transparent 70%);
+  animation: cardShimmer 8s infinite;
+  pointer-events: none;
+}
+@keyframes cardShimmer {
+  0% { left: -120%; }
+  100% { left: 180%; }
+}
+
+/* MEDALLION */
+.i707-auth-medallion {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.i707-auth-medallion__glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192,57,43,0.3), transparent 70%);
+  animation: medallionPulse 3s ease-in-out infinite;
+}
+@keyframes medallionPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+.i707-ring1 { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid rgba(192, 57, 43, 0.6); }
+.i707-ring2 { position: absolute; inset: 12px; border-radius: 50%; border: 1px solid rgba(192, 57, 43, 0.4); }
+.i707-ring3 { position: absolute; inset: 24px; border-radius: 50%; border: 0.5px solid rgba(255, 215, 0, 0.3); }
+.i707-monogram {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #C0392B;
+  text-align: center;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 12px rgba(192,57,43,0.5);
+}
+
+/* HEADER */
+.i707-auth-eyebrow {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.45em;
+  color: rgba(192, 57, 43, 0.7);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.i707-auth-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #F5F0E8;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 0 0 40px rgba(192, 57, 43, 0.4);
+}
+.i707-auth-subtitle {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: rgba(245, 240, 232, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+/* DIVIDER */
+.i707-auth-divider {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.i707-divider-line {
+  flex: 1;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(192, 57, 43, 0.5));
+}
+.i707-divider-line:last-child {
+  background: linear-gradient(90deg, rgba(192, 57, 43, 0.5), transparent);
+}
+.i707-divider-diamond {
+  width: 7px;
+  height: 7px;
+  background: #C0392B;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin: 0 10px;
+  box-shadow: 0 0 12px rgba(192,57,43,0.5);
+}
+
+/* MODE TOGGLE */
+.i707-auth-toggle {
+  display: flex;
+  width: 100%;
+  background: rgba(245,240,232,0.04);
+  border: 0.5px solid rgba(192,57,43,0.2);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 22px;
+  gap: 4px;
+}
+.i707-auth-toggle__btn {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-style: italic;
+}
+.i707-auth-toggle__btn.active {
+  background: linear-gradient(135deg, #C0392B, #8B2520);
+  color: #F5F0E8;
+  box-shadow: 0 4px 12px rgba(192,57,43,0.3);
+}
+
+/* FORM */
+.i707-auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.i707-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.i707-input-group label {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: rgba(245, 240, 232, 0.5);
+  text-transform: uppercase;
+  font-style: italic;
+}
+.i707-input-group input {
+  background: rgba(245, 240, 232, 0.04);
+  border: 0.5px solid rgba(192, 57, 43, 0.25);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 14px;
+  color: #F5F0E8;
+  outline: none;
+  transition: all 0.3s;
+}
+.i707-input-group input::placeholder {
+  color: rgba(245, 240, 232, 0.25);
+  font-style: italic;
+}
+.i707-input-group input:focus {
+  border-color: rgba(192, 57, 43, 0.7);
+  background: rgba(192, 57, 43, 0.05);
+  box-shadow: 0 0 20px rgba(192,57,43,0.1);
+}
+.i707-input-hint {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 10px;
+  color: rgba(245,240,232,0.3);
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+/* BUTTON */
+.i707-auth-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #C0392B, #8B2520);
+  border: none;
+  border-radius: 10px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: #F5F0E8;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 8px;
+  box-shadow: 0 6px 20px rgba(192,57,43,0.3);
+}
+.i707-auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(192,57,43,0.5);
+}
+.i707-auth-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ERROR */
+.i707-auth-error {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 12px;
+  color: #C0392B;
+  text-align: center;
+  letter-spacing: 0.05em;
+  background: rgba(192,57,43,0.08);
+  border: 0.5px solid rgba(192,57,43,0.25);
+  border-radius: 10px;
+  padding: 10px;
+  font-style: italic;
+}
+
+/* SWITCH */
+.i707-auth-switch {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 12px;
+  color: rgba(245, 240, 232, 0.4);
+  margin-bottom: 14px;
+  font-style: italic;
+}
+.i707-auth-switch span {
+  color: #C0392B;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-style: normal;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.i707-auth-switch span:hover {
+  color: #FFD700;
+}
+
+/* BACK */
+.i707-auth-back {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(245, 240, 232, 0.25);
+  cursor: pointer;
+  transition: color 0.3s;
+  font-style: italic;
+}
+.i707-auth-back:hover {
+  color: rgba(245, 240, 232, 0.6);
+}
